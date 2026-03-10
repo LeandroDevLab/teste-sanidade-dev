@@ -7,6 +7,33 @@
     <title>Teste de sanidade para DEVs</title>
   </head>
   <body>
+    <header>
+      <h1>TESTE DE SANIDADE</h1>
+    </header>
+    <main class="container">
+      <p>Responda as questões com sinceridade</p>
+      <div class="question">
+        <p>É desenvolvedor Frontend:</p>
+        <label class="switch">
+          <input type="checkbox" class="front" onclick="onFront()" />
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="question">
+        <p>É desenvolvedor Backend:</p>
+        <label class="switch">
+          <input type="checkbox" class="back" onclick="onBack()" />
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="question">
+        <p>Considera-se com sanidade mental:</p>
+        <label class="switch">
+          <input type="checkbox" class="sanidade" onclick="onSanidade()" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </main>
     <script src="script.js" defer></script>
   </body>
 </html>
