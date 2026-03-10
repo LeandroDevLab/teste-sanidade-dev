@@ -10,14 +10,35 @@ body {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  background: linear-gradient(2deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 60%, rgba(0, 0, 0, 0.64) 100%);
+  height: 100vh;
+  padding: 50px 0;
 }
 
 header h1 {
   margin: 30px auto;
-  font-size: 40px;
+  font-size: 60px;
   font-weight: 900;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  background-image: url(JEMA-BRY.jpg);
+  background-size: contain;
+  background-clip: text;
+  color: transparent;
+  animation: texto 20s linear infinite;
+
+}
+
+@keyframes texto {
+  to{
+    background-position-x: -500px
+  }
+}
+
+.instruction {
+  font-size: 40px;
 }
 
 .container {
@@ -36,7 +57,7 @@ header h1 {
 
 .question {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   gap: 10px;
   justify-content: center;
   align-items: center;
@@ -89,4 +110,40 @@ input:checked + .slider {
 
 input:checked + .slider::before {
   transform: translateX(24px);
+}
+
+@media (max-width: 700px){
+  header h1{
+      font-size: 40px;
+  }
+
+  .instruction {
+  font-size: 24px;
+  margin-bottom: 20px;
+  }
+
+  .switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 21px;
+  }
+
+  .slider::before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+  }
+
+  .question p {
+  font-size: 20px;
+}
+
+
 }
