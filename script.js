@@ -12,7 +12,7 @@ function onSanidade(){
 }
 
 function onFront(){
-  if(inputSanidade[0].checked === false){
+  if(inputSanidade[0].checked === false && inputBack[0].checked === false){
     inputSanidade[0].checked = true
   }
 }
